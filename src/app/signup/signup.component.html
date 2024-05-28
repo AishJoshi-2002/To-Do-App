@@ -1,0 +1,30 @@
+<div class="addTask">
+    <div class="space"></div>
+    <div class="center">
+        <p class="heading">{{title}}</p>
+        <br>
+        <div>
+
+            <form #signUpForm="ngForm" (ngSubmit)="userSignUpDetails(signUpForm.value)">
+
+                <input type="email" required #email="ngModel" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+\.[a-zA-z]{2,3}$" [email]="true" ngModel placeholder="Enter email" name="email" />
+                <br>
+                <span class="warning" *ngIf="email.touched && email.errors?.['required']">This is a required field</span>
+                <span class="warning" *ngIf="email.touched && email.errors?.['pattern']">Enter a valid email</span>
+                <br><br>
+
+                <input [type]=toggle required #password="ngModel" minlength="8" maxlength="12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$" ngModel placeholder="Enter password" name="password" />
+                <i class="far fa-eye-slash" id="togglePassword" *ngIf="!isShow" (click)="showPassword(password.value)"></i>
+                <i class="far fa-eye" id="togglePassword" *ngIf="isShow" (click)="showPassword(password.value)"></i>
+                <br>
+                <span class="warning" *ngIf="password.touched && password.errors?.['required']">This is a required field</span>
+                <span class="warning" *ngIf="password.touched && password.errors?.['pattern']">Password should contain minimum 8 and maximum 12 characters, at least one uppercase letter, one lowercase letter, one number and one special character:</span>
+                <br><br>
+
+                <input type="submit" [disabled]="signUpForm.invalid" value="SignUp">
+            </form>
+
+        </div>
+
+    </div>
+</div>

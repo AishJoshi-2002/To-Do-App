@@ -1,0 +1,43 @@
+<!--Header-->
+<nav class="navbar navbar-expand-lg navbar-light your-bg-navbar">
+    <div class="container-fluid">
+        <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfmx_HCwh2I99M7-9LuLfhnvj1TH8CCT_K6A&usqp=CAU"
+                alt="logo"></div>
+        <a class="navbar-brand" routerLink="">ToDo App</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="" routerLinkActive="active">Home</a>
+                </li>
+                <li class="nav-item" *ngIf = "!isLoggedIn()">
+                    <a class="nav-link" routerLink="login" routerLinkActive="active" >Login</a>
+                </li>
+                <li class="nav-item" *ngIf = "!isLoggedIn()">
+                    <a class="nav-link" routerLink="signup" routerLinkActive="active" >SignUp</a>
+                </li>
+                <li class="nav-item" *ngIf = "isLoggedIn()">
+                    <a class="nav-link" routerLink="addtask" routerLinkActive="active" >AddTask</a>
+                </li>
+                <li class="nav-item" *ngIf = "isLoggedIn()">
+                    <a class="nav-link" routerLink="tasklist" routerLinkActive="active" >TaskList</a>
+                </li>
+                <li class="nav-item" *ngIf = "isLoggedIn()">
+                    <a class="nav-link" routerLink="completed" routerLinkActive="active" >Completed</a>
+                </li>
+                <li class="nav-item" *ngIf = "isLoggedIn()">
+                    <a class="nav-link" routerLink="" routerLinkActive="active" (click)="logOut()">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link last" routerLink="info" routerLinkActive="active">Info</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

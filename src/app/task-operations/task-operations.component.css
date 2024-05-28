@@ -1,0 +1,49 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  
+  .btnBdr{
+    border-radius:5px ;
+    width: 120px;
+  }
+  
+  .btnBdr:hover {
+    background-color: #ffa5e1;
+  }
+  
+  .btnBdr:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  .edit{
+   background-color: #59cbee;
+   position: center;
+  }
+  
+  .done{
+    background-color: hsl(335, 92%, 60%);
+    position: center;
+  }
+  
+  /* .fetch{
+    margin-top: 25px;
+    margin-left: 15px;
+  } */
+  
+  .clr{
+    margin-top: 25px;
+    margin-left: 20px;
+  }
+

@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/*Carasouel*/
+.carousel-inner img{
+    width: 100%;
+    height: 90vh;
+  }
+
+  /*Carasouel*/
+/* .carousel-inner{
+  background-color: #ffdeeb;
+  width: 100%;
+  height: 90vh;
+} */
+
+/* .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+} */

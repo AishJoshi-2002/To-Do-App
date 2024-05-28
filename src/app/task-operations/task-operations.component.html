@@ -1,0 +1,27 @@
+<table>
+
+    <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Create date</th>
+        <th>Due date</th>
+        <th></th>
+        <th></th>
+    </tr>
+
+    <tr *ngFor="let task of allTaskList; index as i ">
+        <td>{{i+1}}</td>
+        <td>{{task.title}}</td>
+        <td>{{task.description}}</td>
+        <td>{{task.createDate}}</td>
+        <td>{{task.dueDate}}</td>
+        <td><input type="submit" value="Edit" class="btnBdr edit" (click)="editTask(task.id, task)"></td>
+        <td><input type="submit" value="Done" class="btnBdr done" (click)="doneTask(task.id)"></td>
+    </tr>
+
+</table>
+
+<br><br>
+
+<input type="submit" value="Clear Details" class="btnBdr clr" (click)="clearList()">

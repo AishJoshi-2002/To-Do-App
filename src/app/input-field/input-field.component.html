@@ -1,0 +1,33 @@
+<div class="addTask">
+    <div class="space"></div>
+    <div class="center">
+        <p class="heading textFont">{{titleHead}}</p>
+        <br>
+        <div>
+            <form [formGroup]="todoForm" (ngSubmit)="addOrEditTask()">
+
+                <label class="textFont">Title</label><br>
+                <input type="text" placeholder="Enter title" name="title" formControlName="title" class="title"/>
+                <!-- formControlName="name" for binding name in html to name in ts -->
+                <br>
+                <span class="warning" *ngIf="title && title.invalid && title.touched">This is a required field</span>
+                <br>
+
+                <label class="textFont">Description</label><br>
+                <textarea id="message" name="description" formControlName="description" class="description" required placeholder="describing task..."></textarea>
+                <br>
+                <span class="warning" *ngIf="description && description.invalid && description.touched">This is a required field</span>
+                <br>
+
+                <label class="textFont">Due date</label><br>
+                <input type="date" placeholder="Enter number" name="dueDate" formControlName="dueDate">
+                <br>
+                <br>
+
+                <button [disabled]="todoForm.invalid">{{addOrEdit}}</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+

@@ -1,0 +1,76 @@
+.addTask{
+    background-color: #badeff;
+    width: 100%;
+    height: 90vh;
+}
+
+.space{
+    width: 100%;
+    height: 28px;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    border: 2px solid rgb(16, 119, 204);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.heading{
+    color: rgb(110, 99, 255);
+    text-align: center;
+    font-size: xx-large;
+}
+
+input{
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+}
+
+label{
+    text-align: right;
+    font-size: larger;
+}
+
+.title{
+    height: 35px;
+}
+
+.description{
+    height: 90px;
+    resize: none;
+    width: 100%;
+    padding: 10px;
+}
+
+button {
+    border: 1px solid hsl(197, 91%, 67%);
+    background-color: rgb(250, 145, 250);
+    color: #ffffff;
+    padding: 5px 10px;
+}
+
+button:hover {
+    border: 1px solid hsl(197, 91%, 67%);
+    background-color: hsl(300, 93%, 63%);
+    color: #ffffff;
+    padding: 5px 10px;
+}
+
+button:disabled,
+button[disabled] {
+    border: 1px solid hsl(197, 91%, 67%);
+    background-color: hsl(197, 91%, 67%);
+    color: #ffffff;
+}
+
+.warning{
+    color: red;
+}
+
+.textFont{
+    font-family: Monotype Corsiva;
+}
+

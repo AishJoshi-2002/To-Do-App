@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Navbar*/
+.your-bg-navbar {
+  background-color: #ff99c2;
+  height: 62px;
+}
+
+.container-fluid{
+  background-color: #ff99c2;
+}
+
+.logo{
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.navbar-brand{
+  font-family:Algerian;
+  font-size: 150%;
+}
+
+.nav-link{
+  font-family:Sitka Small;
+}
+
+.last{
+  margin-right: 1rem;
+}
